@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukiri Collins Mureti - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Welcome</h1>
+                <p>My name is <span>Mukiri Collins Mureti</span> and this is my portfolio.<br>Let me give you a tour.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------About Page Begins Here----------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="subtitle1">About Me</h1>
+                    <p>I am a young and enthusiatic sofware developer whose passion is to create solutions based on your
+                        needs.
+                        I grew up in a very tech-related background and I do not intend to stop. I have very good social
+                        and communication skills which I believe makes the delivery of the solution seemless and
+                        amazing.
+                        I engage in hobbies such as playing video games, photography, video streaming as well as
+                        traveling with
+                        friends and family.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX Design</span><br>Design interactive user interfaces</li>
+                            <li><span>Web App Development</span><br>Web application development</li>
+                            <li><span>DB Management</span><br>Database design and management</li>
+                            <li><span>IT Support</span><br>Debugging and fixing software problems</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-Present</span><br>Support Specialist at Sybrin Kenya Limited</li>
+                            <li><span>2022</span><br>Internship Software Developer at Fintech Group Limited</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2023</span><br>Bachelor's Degree in Science in Information Technology at KCA
+                                University</li>
+                            <li><span>2015-2018</span><br>Kenya Certificate of Secondary Education at Moi Forces
+                                Academy, Kenya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------Services--------------------------------------------------->
+    <div id="serivces">
+        <div class="container">
+            <h1 class="subtitle1">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Database Creation and Management</h2>
+                    <p>I am able to help you create a well designed and managed database to your liking</p>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>I am able to help you create a well designed and managed web application to your liking</p>
+                </div>
+                <div>
+                    <h2>Code Debugging</h2>
+                    <p>I am able to help you fix your line of code whenever there is an issue</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------Portfolio------------------------------------------------------->
+    <div id="portfolio">
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
